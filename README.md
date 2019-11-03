@@ -16,10 +16,10 @@ Login page:
 ![](/images/1_login.png)
 
 List of Shops:
-![](/images/2_shops.png)
+![](/images/2_shops_list.png)
 
 Items in each Shop:
-![](/images/3_items.png)
+![](/images/3_items_list.png)
 
 Adding Items:
 ![](/images/1_before.png)
