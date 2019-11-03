@@ -1,0 +1,40 @@
+<html>
+<center><body style="background-color:#ebf78f;">
+
+<h1 style="color:blue;">MY CART</h1>
+
+<table border = "2" width = 200 height = "150">
+
+  {% for todo_item in all_items %}
+
+    <tr><td><h3>{{ todo_item.content }}</h3>
+
+      <form action="/delete/{{todo_item.id}}/"
+
+            style="display: inline;"
+
+            method="post">{% csrf_token %}
+
+        <td><input type="submit" value="Delete"/></td>
+
+      </form>
+
+    </td></tr>
+
+  {% endfor %}
+
+</table>
+<hr>
+
+
+
+<form action="/add/" method="post">{% csrf_token %}
+
+  <input type="text" name="content"/>
+
+  <input type="submit" value="Add To Cart"/>
+
+</form>
+</hr>
+</body></center>
+</html>

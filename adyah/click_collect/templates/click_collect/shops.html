@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADYAH</title>
+  </head>
+  <center><body style="background-color:#e1f495;">
+<hr>
+    <h1 style="color:red;">{{shop.name}}</h1></hr><hr>
+    <ul style="list-style-type:none">
+        <li style="color:#e52727;"><h4>Area: {{shop.area}}</h4></li>
+    </ul></hr> -------------------------------------------------------------
+    <h2 style="color:blue;">Items Available In {{shop.name}} Are:</h2>
+    <table border = "2" width = 400 height = "300">
+      <tr>
+      {% for item in items %}
+        <ul style="list-style-type:square"><tr><td style="text-align:center; color:#556887;"><li><h3>{{ item }}</li></td></tr></ul>
+      {% empty %}
+        <tr><td> No items </td></tr>
+      {% endfor %}
+    </tr>
+  </table>
+--------------------------------------------------------------------------------------
+    <!--<hr>
+      <a href="{% url 'book' %}"> Add Items to Cart </a>
+    </hr> -->
+
+    <hr>
+    <a href="{% url 'index' %}">Back to Shop List</a>
+  </body></center>
+</html>

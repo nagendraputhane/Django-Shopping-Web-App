@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shops</title>
+  </head>
+  <center><body style="background-color:#e1f495;">
+    <hr>
+    <h1 style="color:red;"> SHOPS </h1>
+    <table border = "2" width = 500 height = "500">
+      <tr><ol>
+      {% for shop in shops %}
+        <tr><td><li>
+          <a href="{% url 'shop' shop.id %}"><h2> {{shop}}</h2>
+        </li></td></tr>
+      {% endfor %}
+    </ol></tr>
+</hr>
+<hr>
+    <ul style="list-style-type:none">
+      <li style="color:blue;">Currently Logged In As: {{ user.username }}</li>
+      <li><a style="color:#e52727;" href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+
+    ----------------------------------------------------------------------------
+</hr>
+
+  </body></center>
+</html>

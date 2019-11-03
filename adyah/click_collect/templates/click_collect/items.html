@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADYAH</title>
+  </head>
+  <center><body style="background-color:#e1f495;">
+    <ul>
+
+  {% for item in items %}
+
+    <li><h4>{{ item.content }}</h4></li>
+
+  {% endfor %}
+
+</ul>
+
+<form action="/add/" method="post">{% csrf_token %}
+
+  <input type="text" name="content"/>
+
+  <input type="submit" value="Add"/>
+
+</form>
+
+</body>
+</html>
